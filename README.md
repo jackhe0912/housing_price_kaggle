@@ -1,1 +1,1 @@
-# housing_price_kaggle
+本次上传的是kaggle比赛中房价预测的项目，train和test分别为训练集和测试集，houseprice为预测的结果，house_price_project为项目代码
