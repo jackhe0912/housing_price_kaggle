@@ -6,10 +6,10 @@ warnings.filterwarnings('ignore')
 plt.style.use('ggplot')
 
 from sklearn.base import BaseEstimator,TransformerMixin, RegressorMixin,clone
-from sklearn.preprocessing import LabelEncoder
+#from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import RobustScaler,StandardScaler  #数据包含许多异常值，使用均值和方差缩放可能并不是一个很好的选择，可以使用RobustScaler或robust_scaler
 from sklearn.metrics import mean_squared_error
-from sklearn.pipeline import Pipeline,make_pipeline
+#from sklearn.pipeline import Pipeline,make_pipeline
 from scipy.stats import skew
 
 from sklearn.model_selection import cross_val_predict,GridSearchCV,KFold
@@ -17,9 +17,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import Lasso,LassoCV,Ridge, ElasticNet
 from sklearn.ensemble import RandomForestRegressor,GradientBoostingRegressor,ExtraTreesRegressor
 from sklearn.svm import SVR,LinearSVR
-from sklearn.linear_model import SGDRegressor,BayesianRidge
+#from sklearn.linear_model import SGDRegressor,BayesianRidge
 from sklearn.kernel_ridge import KernelRidge
-import lightgbm as lgbm
+#import lightgbm as lgbm
 
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import cross_val_score
@@ -243,8 +243,8 @@ def main():
     dataset=addmorefeat(dataset)       #添加挖掘出的特征
     dataset=tranfer2str(dataset)       #将部分数值型特征转换成类别型
     dataset=skew_dummiestransform(dataset)  #对数据的偏度进行处理
-    dataset=replace_process(dataset)
-    dataset=transfer_encoder(dataset)
+    #dataset=replace_process(dataset)
+    #dataset=transfer_encoder(dataset)
     dataset=get_dummies(dataset)
 
 
